@@ -1,0 +1,30 @@
+{
+    "events": [
+        {
+                "name": "Graduate",
+                "description": "I want to graduate",
+                "dueDate": "1240247200"
+        },
+        {
+                "name": "Prepare for Graduation",
+                "description": "I need to buy clothes",
+                "dueDate": "1230277200"
+        },
+	{
+                "name": "Make a cleaning",
+                "description": "I need to clean my house",
+                "dueDate": "1220327200"
+        },
+	{
+                "name": "Do whatever I need",
+                "description": "I need to do this",
+                "dueDate": "1210307200"
+        },
+	{
+                "name": "Find a job",
+                "description": "Where will I go after graduation",
+                "dueDate": "1200207200"
+        }
+
+  ]
+}

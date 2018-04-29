@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "778268155085",
+    "firebase_url": "https://aud-bucket-list.firebaseio.com",
+    "project_id": "aud-bucket-list",
+    "storage_bucket": "aud-bucket-list.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778268155085:android:8284fcfb52ddcb7b",
+        "android_client_info": {
+          "package_name": "com.example.akhmet.audbucketlist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778268155085-f2ason9d97rqb66bp725ai7mkp89qp28.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.akhmet.audbucketlist",
+            "certificate_hash": "92a18dc4dc5f57d9ef80aef0afc1ce1ccd7f940b"
+          }
+        },
+        {
+          "client_id": "778268155085-g4hqai5460ftppsnnmjjcdltkugpcsui.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW5QuaNu6q9M86Z2w9ntR1QN4Wi5ZQxKc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778268155085-g4hqai5460ftppsnnmjjcdltkugpcsui.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
