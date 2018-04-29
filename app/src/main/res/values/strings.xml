@@ -27,4 +27,7 @@
     <string name="sign_up_text">Sign Up!</string>
     <string name="add_item">Add New Item</string>
     <string name="action_logout">Logout</string>
+    <string name="txtLongtitude">Longitude</string>
+    <string name="txtLat">Latitude</string>
+    <string name="latLng">0.00</string>
 </resources>

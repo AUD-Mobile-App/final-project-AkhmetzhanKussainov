@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -40,6 +41,7 @@ public class ItemInfoActivity extends FragmentActivity implements OnMapReadyCall
     EditText txtName;
     EditText txtDescription;
     DatePicker datePicker;
+    TextView txtLong,txtLat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,8 @@ public class ItemInfoActivity extends FragmentActivity implements OnMapReadyCall
         txtName=findViewById(R.id.txtEditEvent);
         txtDescription=findViewById(R.id.txtEditDescription);
         datePicker=findViewById(R.id.datePickerEdit);
+        txtLong=findViewById(R.id.txtLogntitude);
+        txtLat=findViewById(R.id.txtLat);
 
      /*   txtName=findViewById(R.id.txtEditEvent);
         txtDescription=findViewById(R.id.txtEditDescription);
@@ -137,6 +141,8 @@ public class ItemInfoActivity extends FragmentActivity implements OnMapReadyCall
                 datePicker.updateDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
                 LatLng dubai = new LatLng(event.getLatitude(), event.getLongtitude());
                 mLatLng = dubai;
+                txtLong.setText(Double.toString(mLatLng.longitude));
+                txtLat.setText(Double.toString(mLatLng.latitude));
                 mMarker = new MarkerOptions().position(dubai).title(event.getName());
                 mGoogleMap.clear();
                 mGoogleMap.addMarker(mMarker);
@@ -194,6 +200,8 @@ public class ItemInfoActivity extends FragmentActivity implements OnMapReadyCall
             @Override
             public void onMapClick(LatLng latLng) {
                 mLatLng=latLng;
+                txtLong.setText(Double.toString(mLatLng.longitude));
+                txtLat.setText(Double.toString(mLatLng.latitude));
                 mGoogleMap.clear();
                 mMarker=new MarkerOptions().position(latLng).title("Event Place");
                 mGoogleMap.addMarker(mMarker);

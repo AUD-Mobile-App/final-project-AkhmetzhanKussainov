@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -30,6 +31,7 @@ public class AddItem extends FragmentActivity implements OnMapReadyCallback {
     private GoogleMap mGoogleMap;
     private MarkerOptions mMarker;
     private LatLng mLatLng;
+    TextView txtLat,txtLong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,8 @@ public class AddItem extends FragmentActivity implements OnMapReadyCallback {
         Button btnAdd = findViewById(R.id.btnAddItem);
         android.support.v7.widget.Toolbar toolbar=findViewById(R.id.toolbar);
         ImageButton btnCancel = toolbar.findViewById(R.id.btnCancel);
+        txtLat=findViewById(R.id.txtLat);
+        txtLong=findViewById(R.id.txtLogntitude);
 
         final DatePicker datePicker = (DatePicker) findViewById(R.id.datePicker);
 
@@ -114,6 +118,8 @@ public class AddItem extends FragmentActivity implements OnMapReadyCallback {
             @Override
             public void onMapClick(LatLng latLng) {
                 mLatLng=latLng;
+                txtLat.setText(Double.toString(mLatLng.latitude));
+                txtLong.setText(Double.toString(mLatLng.longitude));
                 mGoogleMap.clear();
                 mMarker=new MarkerOptions().position(latLng).title("Event Place");
                 mGoogleMap.addMarker(mMarker);
